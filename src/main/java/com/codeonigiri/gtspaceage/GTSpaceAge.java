@@ -1,5 +1,6 @@
 package com.codeonigiri.gtspaceage;
 
+import com.codeonigiri.gtspaceage.common.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
@@ -7,6 +8,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -20,6 +22,13 @@ public class GTSpaceAge {
 
     public static final Logger LOGGER = LogManager.getLogger(Tags.MODID);
 
+    @SidedProxy(
+        modId = Tags.MODID,
+        clientSide = "com.codeonigiri.gtspaceage.client.ClientProxy",
+        serverSide = "com.codeonigiri.gtspaceage.common.CommonProxy"
+    )
+    public static CommonProxy proxy;
+
     @EventHandler
     // preInit "Run before anything else. Read your config, create blocks, items, etc. (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
@@ -31,7 +40,7 @@ public class GTSpaceAge {
     @SubscribeEvent
     // Register recipes here (Remove if not needed)
     public void registerRecipes(RegistryEvent.Register<IRecipe> event) {
-
+        proxy.registerRecipes(event);
     }
 
     @SubscribeEvent
@@ -49,6 +58,7 @@ public class GTSpaceAge {
     @EventHandler
     // load "Do your mod setup. Build whatever data structures you care about." (Remove if not needed)
     public void init(FMLInitializationEvent event) {
+        proxy.init(event);
     }
 
     @EventHandler
