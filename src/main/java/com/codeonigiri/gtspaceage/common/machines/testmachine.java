@@ -7,10 +7,9 @@ import gregtech.api.gui.widgets.ProgressWidget;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
-import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 import net.minecraft.util.ResourceLocation;
 
-import static com.codeonigiri.gtspaceage.client.texture.machines.GTSASingleMachine.TEST_OVERLAY;
+import static com.codeonigiri.gtspaceage.client.texture.machines.GTSASingleMachinetexture.TEST_OVERLAY;
 import static gregtech.common.metatileentities.MetaTileEntities.registerMetaTileEntity;
 
 public class testmachine {
@@ -32,15 +31,17 @@ public class testmachine {
     public static void registerSingleMachine(){
         int id = 18000;
         for (int i = 1; i < testMachine.length; i++) {
-            String voltageName = GTValues.VN[i].toLowerCase();
-            testMachine[i] = registerMetaTileEntity(id + (i -1),
-                    new SimpleMachineMetaTileEntity(
-                            new ResourceLocation(Tags.MODID, String.format("%s.%s", "testmachine", voltageName)),
-                            TEST_RECIPE_MAP,
-                            TEST_OVERLAY,
-                            i,
-                            true
-                    ));
+            if (i <= GTValues.UV){
+                String voltageName = GTValues.VN[i].toLowerCase();
+                testMachine[i] = registerMetaTileEntity(id + (i -1),
+                        new SimpleMachineMetaTileEntity(
+                                new ResourceLocation(Tags.MODID, String.format("%s.%s", "testmachine", voltageName)),
+                                TEST_RECIPE_MAP,
+                                TEST_OVERLAY,
+                                i,
+                                true
+                        ));
+            }
         }
     }
 }

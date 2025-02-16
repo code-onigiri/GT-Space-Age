@@ -35,6 +35,7 @@ public class GTSpaceAge {
         // register to the event bus so that we can listen to events
         MinecraftForge.EVENT_BUS.register(this);
         LOGGER.info("I am " + Tags.MODNAME + " + at version " + Tags.VERSION);
+        proxy.preInit(event);
     }
 
     @SubscribeEvent
