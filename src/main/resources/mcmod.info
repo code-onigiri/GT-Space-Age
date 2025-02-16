@@ -6,7 +6,7 @@
     "mcversion": "${mcversion}",
     "logoFile": "",
     "url": "",
-    "authorList": [],
+    "authorList": ["code-onigiri"],
     "credits": "",
     "dependencies": []
 }]

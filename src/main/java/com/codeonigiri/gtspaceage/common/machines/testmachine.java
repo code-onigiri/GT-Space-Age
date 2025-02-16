@@ -7,6 +7,7 @@ import gregtech.api.gui.widgets.ProgressWidget;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
+import gregtech.api.util.GTUtility;
 import net.minecraft.util.ResourceLocation;
 
 import static com.codeonigiri.gtspaceage.client.texture.machines.GTSASingleMachinetexture.TEST_OVERLAY;
@@ -39,7 +40,8 @@ public class testmachine {
                                 TEST_RECIPE_MAP,
                                 TEST_OVERLAY,
                                 i,
-                                true
+                                true,
+                                GTUtility.hvCappedTankSizeFunction
                         ));
             }
         }
