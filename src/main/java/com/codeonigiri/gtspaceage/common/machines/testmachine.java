@@ -23,10 +23,10 @@ public class testmachine {
     public static final RecipeMap<SimpleRecipeBuilder> TEST_RECIPE_MAP = new RecipeMap<>("testmachine",
             2,2,1,1,
             new SimpleRecipeBuilder(),false)
-                .setSlotOverlay(false,false, GuiTextures.IN_SLOT_OVERLAY)
-                .setSlotOverlay(true,false, GuiTextures.OUT_SLOT_OVERLAY)
-                .setSlotOverlay(false,true, GuiTextures.ATOMIC_OVERLAY_1)
-                .setSlotOverlay(true,true, GuiTextures.ATOMIC_OVERLAY_2)
+                .setSlotOverlay(false,false, GuiTextures.SLOT)
+                .setSlotOverlay(true,false, GuiTextures.SLOT)
+                .setSlotOverlay(false,true, GuiTextures.FLUID_SLOT)
+                .setSlotOverlay(true,true, GuiTextures.FLUID_SLOT)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL);
 
     public static void registerSingleMachine(){

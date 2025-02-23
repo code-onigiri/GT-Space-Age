@@ -1,6 +1,7 @@
 package com.codeonigiri.gtspaceage.common;
 
 import com.codeonigiri.gtspaceage.common.machines.testmachine;
+import com.codeonigiri.gtspaceage.loaders.recipes.GTSARecipe;
 import com.codeonigiri.gtspaceage.util.GTSALogger;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
@@ -18,6 +19,7 @@ public class CommonProxy {
     public void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         GTSALogger.logger.info("Registering recipes");
         testmachine.init();
+        GTSARecipe.addRecipe();
     }
 
     public void preInit(FMLPreInitializationEvent event) {
