@@ -32,7 +32,7 @@ public class testmachine {
     public static void registerSingleMachine(){
         int id = 18000;
         for (int i = 1; i < testMachine.length; i++) {
-            if (i <= GTValues.UV){
+            if (i <= GTValues.MAX){
                 String voltageName = GTValues.VN[i].toLowerCase();
                 testMachine[i] = registerMetaTileEntity(id + (i -1),
                         new SimpleMachineMetaTileEntity(

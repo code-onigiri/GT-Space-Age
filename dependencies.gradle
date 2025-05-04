@@ -42,4 +42,5 @@ dependencies {
     api("com.cleanroommc:modularui:2.4.3") // MUI 2.4.3
     devOnlyNonPublishable(rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:5519022")) // CEu 2.8.10
     devOnlyNonPublishable(rfg.deobf("curse.maven:gregicality-multiblocks-564858:5508050")) // GCYM 1.2.10
+    devOnlyNonPublishable(rfg.deobf("curse.maven:groovyscript-687577:6377628")) // GrsoovyScript 1.2.3
 }
