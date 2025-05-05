@@ -1,8 +1,10 @@
 package com.codeonigiri.gtspaceage;
 
 import com.codeonigiri.gtspaceage.common.CommonProxy;
-import com.codeonigiri.gtspaceage.dimentions.TestWorldGen;
+import com.codeonigiri.gtspaceage.worldgen.moon.MoonWorldGen;
 import com.codeonigiri.gtspaceage.worldgen.ModBiomes;
+import com.codeonigiri.gtspaceage.worldgen.moon.MoonWorldProvider;
+import com.codeonigiri.gtspaceage.worldgen.moon.WorldTypeMoon;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
@@ -36,9 +38,9 @@ public class GTSpaceAge {
     public void preInit(FMLPreInitializationEvent event) {
         // register to the event bus so that we can listen to events
         MinecraftForge.EVENT_BUS.register(this);
-        TestWorldGen.registerDimensions();
+        MoonWorldGen.registerDimensions();
         // Initialize the WorldTypeTest
-        LOGGER.info("Initializing WorldTypeTest: " + com.codeonigiri.gtspaceage.worldgen.WorldTypeTest.INSTANCE.getName());
+        LOGGER.info("Initializing WorldTypeTest: " + WorldTypeMoon.INSTANCE.getName());
         LOGGER.info("I am " + Tags.MODNAME + " + at version " + Tags.VERSION);
         proxy.preInit(event);
     }
@@ -65,6 +67,7 @@ public class GTSpaceAge {
     // load "Do your mod setup. Build whatever data structures you care about." (Remove if not needed)
     public void init(FMLInitializationEvent event) {
         ModBiomes.initBiomeManagerAndDictionary();
+
         proxy.init(event);
     }
 

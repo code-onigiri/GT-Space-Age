@@ -1,11 +1,11 @@
-package com.codeonigiri.gtspaceage.worldgen;
+package com.codeonigiri.gtspaceage.worldgen.moon.biome;
 
-import com.codeonigiri.gtspaceage.dimentions.TestWorldGen;
+import com.codeonigiri.gtspaceage.worldgen.moon.MoonWorldGen;
 import net.minecraft.world.biome.Biome;
 
-public class BiomeTest extends Biome {
-    public BiomeTest() {
-        super(new BiomeProperties(TestWorldGen.TEST_DIM_NAME)
+public class BiomeMoon extends Biome {
+    public BiomeMoon() {
+        super(new BiomeProperties(MoonWorldGen.MOON_DIM_NAME)
                 .setBaseHeight(0.1F)
                 .setRainDisabled()
         );

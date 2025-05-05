@@ -1,28 +1,28 @@
-package com.codeonigiri.gtspaceage.worldgen;
+package com.codeonigiri.gtspaceage.worldgen.moon;
 
-import com.codeonigiri.gtspaceage.dimentions.TestWorldGen;
+import com.codeonigiri.gtspaceage.worldgen.moon.biome.BiomeProviderMoon;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 
-public class WorldTypeTest extends WorldType {
+public class WorldTypeMoon extends WorldType {
 
     // Static instance for easy access
-    public static final WorldTypeTest INSTANCE = new WorldTypeTest();
+    public static final WorldTypeMoon INSTANCE = new WorldTypeMoon();
 
-    public WorldTypeTest() {
-        super(TestWorldGen.TEST_DIM_NAME);
+    public WorldTypeMoon() {
+        super(MoonWorldGen.MOON_DIM_NAME);
     }
 
     @Override
     public BiomeProvider getBiomeProvider(World world){
-        return new BiomeProviderTest();
+        return new BiomeProviderMoon();
     }
 
     @Override
     public IChunkGenerator getChunkGenerator(World world, String generatorOptions){
-        return new ChunkGeneratorTest(world);
+        return new ChunkGeneratorMoon(world);
     }
 
     @Override
