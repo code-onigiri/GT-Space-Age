@@ -6,6 +6,6 @@ import net.minecraft.world.biome.BiomeProviderSingle;
 public class BiomeProviderTest extends BiomeProviderSingle {
 
     public BiomeProviderTest() {
-        super(ModBiomes.test_biome);
+        super(ModBiomes.TEST_BIOME);
     }
 }

@@ -4,14 +4,19 @@ import com.codeonigiri.gtspaceage.dimentions.TestWorldGen;
 import net.minecraft.world.biome.Biome;
 
 public class BiomeTest extends Biome {
-    public BiomeTest(BiomeProperties properties) {
+    public BiomeTest() {
         super(new BiomeProperties(TestWorldGen.TEST_DIM_NAME)
                 .setBaseHeight(0.1F)
                 .setRainDisabled()
         );
+
+        setSpawnables();
     }
 
-    @Override
-
-
+    private void setSpawnables(){
+        spawnableCreatureList.clear();
+        spawnableMonsterList.clear();
+        spawnableWaterCreatureList.clear();
+        spawnableCaveCreatureList.clear();
+    }
 }
