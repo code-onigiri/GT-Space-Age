@@ -3,7 +3,6 @@ package com.codeonigiri.gtspaceage;
 import com.codeonigiri.gtspaceage.common.CommonProxy;
 import com.codeonigiri.gtspaceage.worldgen.moon.MoonWorldGen;
 import com.codeonigiri.gtspaceage.worldgen.ModBiomes;
-import com.codeonigiri.gtspaceage.worldgen.moon.MoonWorldProvider;
 import com.codeonigiri.gtspaceage.worldgen.moon.WorldTypeMoon;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

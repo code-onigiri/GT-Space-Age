@@ -18,7 +18,7 @@ import java.io.IOException;
 public class MoonWorldGen {
 
     public static final String MOON_DIM_NAME = "Moon";
-    public static final int MOON_DIM_ID = 2; // Use a fixed ID for the Moon dimension
+    public static final int MOON_DIM_ID = net.minecraftforge.common.DimensionManager.getNextFreeDimId();
     public static final DimensionType MOON_DIM_TYPE = DimensionType.register(MOON_DIM_NAME, "_" + MOON_DIM_NAME.toLowerCase(), MOON_DIM_ID, MoonWorldProvider.class, false);
 
     public static final void registerDimensions(){

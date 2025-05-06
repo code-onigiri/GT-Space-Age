@@ -130,8 +130,8 @@ public class ChunkGeneratorMoon implements IChunkGenerator {
             // Radius between 8 and 20 blocks
             int radius = 8 + random.nextInt(12);
 
-            // Depth between 3 and 6 blocks
-            int depth = 3 + random.nextInt(3);
+            // Depth between 6 and 9 blocks
+            int depth = 6 + random.nextInt(3);
 
             // Generate the crater that can span across chunks
             generateCraterInWorld(worldX, worldZ, radius, depth);
